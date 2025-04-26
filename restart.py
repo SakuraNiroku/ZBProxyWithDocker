@@ -21,6 +21,7 @@ def init_ZBPROXY_setting():
             zbproxy['Outbounds'][0]['TargetPort'] = int(splitIp[1])
         else:
             zbproxy['Outbounds'][0]['TargetAddress'] = ipconfig['ip']
+            zbproxy['Outbounds'][0]['TargetPort'] = 25565
         with open('ZBProxy.json','w',encoding='utf-8') as ff:
             ff.write(json.dumps(zbproxy))
 
