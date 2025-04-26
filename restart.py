@@ -15,7 +15,12 @@ def init_ZBPROXY_setting():
         with open('ZBProxy.json','r',encoding='utf-8') as ff:
             zbproxy = json.loads(ff.read())
         zbproxy['Services'][0]['Listen'] = ipconfig['port']
-        zbproxy['Outbounds'][0]['TargetAddress'] = ipconfig['ip']
+        splitIp = ipconfig['ip'].split(':')
+        if len(splitIp) == 2:
+            zbproxy['Outbounds'][0]['TargetAddress'] = splitIp[0]
+            zbproxy['Outbounds'][0]['TargetPort'] = int(splitIp[1])
+        else:
+            zbproxy['Outbounds'][0]['TargetAddress'] = ipconfig['ip']
         with open('ZBProxy.json','w',encoding='utf-8') as ff:
             ff.write(json.dumps(zbproxy))
 
