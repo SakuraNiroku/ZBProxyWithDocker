@@ -1,5 +1,5 @@
 FROM python:3.9-slim
 WORKDIR /app
 COPY . .
-RUN pip install putils gunicorn && chmod +x zbproxy
-CMD ["gunicorn", "-c", "gunicorn_config.py", "app:app"]
+RUN pip install putils gunicorn flask && chmod +x zbproxy
+CMD ["gunicorn", "app:app"]
