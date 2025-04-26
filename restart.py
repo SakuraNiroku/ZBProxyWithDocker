@@ -5,7 +5,7 @@ import psutil
 import json
 
 # 要运行的目标程序路径，这里需要替换成你实际的程序路径
-TARGET_PROGRAM = "zbproxy"
+TARGET_PROGRAM = "./zbproxy"
 PID_FILE = "pid.txt"
 
 def init_ZBPROXY_setting():
