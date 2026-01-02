@@ -19,7 +19,12 @@
         "Rules": [
             {
                 "Type": "always",
-                "Rewrite": {},
+                "Rewrite": {
+                    "Minecraft": {
+                        "Hostname": "mc.hypixel.net",
+                        "Port": 25565
+                    }
+                },
                 "Sniff": "minecraft"
             }
         ]
