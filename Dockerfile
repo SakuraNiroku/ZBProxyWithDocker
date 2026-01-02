@@ -1,4 +1,4 @@
-FROM python:3.9-slim
+FROM ubuntu:22.04
 WORKDIR /app
 COPY . .
 RUN chmod +x zbproxy
