@@ -30,4 +30,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: hikaritka/zbproxywithdocker:latest
+          tags: hikaritka/zbproxywithdocker:test
